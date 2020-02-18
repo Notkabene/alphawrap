@@ -1,6 +1,19 @@
-@import "vars";
+@import "animated";
 @import "libs";
 @import "fonts";
+
+
+.animated-fadeInLeft,
+.animated-fadeInRight,
+.animated-fadeInDownBig {
+  animation-play-state: paused;
+}
+
+section.active .animated-fadeInLeft,
+section.active .animated-fadeInRight,
+section.active .animated-fadeInDownBig{
+  animation-play-state: running;
+}
 
 html {
   box-sizing: border-box;
@@ -36,10 +49,10 @@ body {
   background-color: #000;
 }
 
-.container {
+.main {
   max-width: 1920px;
   margin: 0 auto;
-  overflow-x: hidden;
+  position: relative;
 }
 
 .car-photo {
@@ -132,12 +145,6 @@ section {
     width: 100%;
   }
 }
-
-// .pp-tableCell {
-//   background-color: #000;
-//   overflow: hidden;
-// }
-
 // ~~~~~~~ Header ~~~~~~~
 .header {
   max-width: 1920px;
@@ -313,7 +320,7 @@ section {
   .bottom-line {
     border-right: 1940px solid #000;
     border-top: 90px solid transparent;
-    left: -120px;
+    bottom: 7px;
 
   }
   .top-line {
@@ -502,6 +509,7 @@ section {
   background-color: #000;
   background-color: #2b2a29;
   position: relative;
+  width: 100%;
 }
 .nissan-juke__left {
   position: absolute;
@@ -608,6 +616,10 @@ section {
 }
 
 // ~~~~~~~ Footer ~~~~~~~
+footer {
+  display: flex;
+  align-items: center;
+}
 .footer {
   background-color: #000;
   display: flex;
@@ -637,6 +649,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: right;
   }
 }
 
