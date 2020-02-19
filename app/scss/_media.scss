@@ -1,0 +1,181 @@
+@media (max-width:1800px) {
+  .header__info {
+    max-width: 600px;
+  }
+  .nissan-juke__right img {
+    max-width: 1280px;
+  }
+  .nissan-juke__right .car-info--right {
+    top: -40px;
+    right: 40px;
+  }
+  .nissan-juke__left img {
+    max-width: 790px;
+  }
+}
+
+@media (max-width:1700px) {
+  .nissan-juke__left .car-info {
+    width: 590px;
+  }
+}
+
+@media (max-width:1600px) {
+  .header .logo img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .header__info {
+    max-width: 500px;
+  }
+  .header .car-photo img {
+    max-width: 1745px;
+    width: auto;
+  }
+  .logos .wrap-text img {
+    width: 550px;
+  }
+  .logos .wrap-white img {
+    width: 250px;
+  }
+  .nissan-juke__right img {
+    max-width: 1150px;
+  }
+  .nissan-juke__left img {
+    max-width: 690px;
+  }
+  .nissan-juke__left .car-info {
+    top: 310px;
+    width: 500px;
+    height: 150px;
+  }
+  .nissan-juke__right .car-info {
+    width: 560px;
+    height: 150px;
+    right: 60px;
+  }
+
+}
+
+@media (max-width:1440px) {
+  .manufacture .manufacture__info-img img,
+  .manufacture .manufacture__info-wrapper {
+    max-width: 410px;
+  }
+  .manufacture .pic-1 {
+    top: 190px;
+  }
+  .manufacture .pic-2 {
+    top: 315px;
+  }
+  .manufacture .pic-4 {
+    width: 225px;
+    top: 500px;
+  }
+  .manufacture .pic-3 {
+    top: 706px;
+    right: -193px;
+  }
+  .vertical-line.toyota-soarer .top-line {
+    border-bottom: 195px solid transparent;
+  }
+  .toyota-soarer .car-info {
+    width: 580px;
+  }
+}
+
+@media (max-width:1350px) {
+  .car-info {
+    position: relative;
+    margin: 0 auto;
+  }
+  .radical-rxc .car-info {
+    left: 0;
+  }
+  .nissan-juke .car-info {
+    position: absolute;
+  }
+  .nissan-juke__right img {
+    padding-top: 250px;
+  }
+  .nissan-juke__right .car-info {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: 35px;
+    width: 800px;
+    right: auto;
+  }
+  .nissan-juke__left {
+    width: 100%;
+  }
+
+  .nissan-juke__left .car-info {
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 560px;
+  }
+}
+
+@media (max-width:1280px) {
+  .footer__img {
+    display: flex;
+    align-items: center;
+  }
+  .footer__info {
+    max-width: 340px;
+  }
+  .footer__text {
+    font-size: 114px;
+  }
+  .footer__item.alpha-vinil {
+    justify-content: space-between;
+  }
+  .footer__item.alpha-vinil .alpha-white {
+    margin-right: 10px;
+  }
+  .logos .wrap-text svg {
+    width: 530px;
+  }
+  .logos .wrap-white svg {
+    width: 240px;
+  }
+  .logos .vinyl-white svg {
+    width: 200px;
+  }
+  .vertical-line.mercedes .top-line {
+    border-top: 30px solid #000;
+  }
+  .manufacture__photos-right {
+    display: none;
+  }
+  .pictures img {
+    width: 100%;
+  }
+  .logos {
+    height: 500px;
+  }
+  .link--block {
+    display: block;
+    margin-left: 40px;
+  }
+}
+
+@media (max-width:1200px) {
+  .animated-fadeInLeft,
+  .animated-fadeInRight,
+  .animated-fadeInDownBig {
+    animation: none;
+  }
+
+  .footer__text{
+    display: none;
+  }
+
+  .footer__text.footer__text-responsive {
+    display: flex;
+  }
+
+}

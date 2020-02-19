@@ -15,9 +15,7 @@ gulp.task('clean', async function(){
 gulp.task('scss', function(){
   return gulp.src('app/scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(autoprefixer({
-      overrideBrowserslist: ['last 10 versions']
-    }))
+    .pipe(autoprefixer())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({stream: true}))

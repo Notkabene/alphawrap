@@ -70,6 +70,7 @@ section {
 .car-info {
   width: 670px;
   height: 190px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,7 +121,7 @@ section {
 // ~~~~~~~ Верхняя косая линия ~~~~~~~
 .top-line {
   position: absolute;
-  top: 0;
+  top: -2px;
 }
 
 // ~~~~~~~ Картинки, включающиеся при адаптиве ~~~~~~~
@@ -148,8 +149,10 @@ section {
 // ~~~~~~~ Header ~~~~~~~
 .header {
   max-width: 1920px;
+  width: 100%;
   position: relative;
-  .logo img{
+  .logo svg {
+
     width: 330px;
     height: 330px;
     border-radius: 50%;
@@ -169,6 +172,8 @@ section {
       box-shadow: 0px 0px 30px #ff003e;
     }
   }
+  .st0{fill:#2B2A29;}
+  .st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FF003E;}
 }
 
 .header__info {
@@ -187,6 +192,7 @@ section {
   right: 0;
   bottom: 0;
   text-align: center;
+  z-index: 2;
 
   &-text span{
     display: block;
@@ -214,13 +220,13 @@ section {
   &__item {
     margin: 0 10px;
   }
-  .wrap-white img {
+  .wrap-white svg {
     width: 282px;
   }
-  .wrap-text img {
+  .wrap-text svg {
     width: 670px;
   }
-  .vinyl-white img {
+  .vinyl-white svg {
     width: 235px;
   }
 }
@@ -706,10 +712,11 @@ footer {
 
 .footer__item-insta {
   display: inline-block;
-  img {
+  svg {
     width: 20px;
     height: 20px;
   }
 }
+
 
 @import "media";
