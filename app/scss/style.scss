@@ -2,19 +2,6 @@
 @import "libs";
 @import "fonts";
 
-
-.animated-fadeInLeft,
-.animated-fadeInRight,
-.animated-fadeInDownBig {
-  animation-play-state: paused;
-}
-
-section.active .animated-fadeInLeft,
-section.active .animated-fadeInRight,
-section.active .animated-fadeInDownBig{
-  animation-play-state: running;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -47,12 +34,18 @@ body {
   color: #fff;
   font-weight: 400;
   background-color: #000;
+
+}
+
+.container {
+  overflow-x: hidden;
 }
 
 .main {
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
+
 }
 
 .car-photo {
@@ -235,6 +228,7 @@ section {
 
 .vertical-line.freightliner__top {
   max-width: 1760px;
+  width: 100%;
   background-color: #000;
 
   &::after {

@@ -53,3 +53,16 @@
 .animated-fadeInDownBig {
   animation-name: fadeInDownBig;
 }
+
+.animated-fadeInLeft,
+.animated-fadeInRight,
+.animated-fadeInDownBig {
+  animation-play-state: paused;
+}
+
+section.active .animated-fadeInLeft,
+section.active .animated-fadeInRight,
+section.active .animated-fadeInDownBig,
+.logos__item.click-animated{
+  animation-play-state: running;
+}
