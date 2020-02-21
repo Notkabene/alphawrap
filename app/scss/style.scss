@@ -34,11 +34,10 @@ body {
   color: #fff;
   font-weight: 400;
   background-color: #000;
-
 }
 
 .container {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .main {
@@ -57,6 +56,7 @@ body {
 section {
   display: flex;
   align-items: center;
+
 }
 
 // ~~~~~~~ Текст у картинок ~~~~~~~
