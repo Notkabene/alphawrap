@@ -21,9 +21,14 @@ a {
   text-decoration: none;
 }
 
-p {
+p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+}
+
+li {
+  list-style: none;
+
 }
 
 body {
@@ -56,26 +61,70 @@ body {
 section {
   display: flex;
   align-items: center;
-
 }
+
+.btn-up {
+  position: fixed;
+  z-index: 999999;
+  bottom: 50px;
+  right: 50px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  opacity: 0.7;
+  img {
+    display: block;
+    width: 100%;
+    animation-name: arrowDown;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+}
+.fp-viewing-slide1 .btn-up {
+  display: none;
+}
+
+
+
+@keyframes arrowDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+}
+
 
 // ~~~~~~~ Текст у картинок ~~~~~~~
 .car-info {
-  width: 670px;
-  height: 190px;
-  padding: 5px;
+  width: 35%;
+  height: 22%;
+  font-size: calc(14px + (29 - 14) * (100vw - 400px) / (1920 - 400));
+  line-height: 1.1em;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-
   background-color: #000;
   position: absolute;
   top: -2px;
   left: 0;
   z-index: 2;
   &__title {
+    font-size: calc(14px + (29 - 14) * (100vw - 400px) / (1920 - 400));
+    line-height: 1.1em;
     margin-bottom: 7px;
     font-weight: 700;
   }
@@ -85,43 +134,12 @@ section {
   left: auto;
 }
 
-// ~~~~~~~ Вертикальные косые линии ~~~~~~~
-.vertical-line {
-  max-width: 1940px;
-  margin: 0 auto;
-  position: relative;
-  &::after, &::before {
-    content: '';
-    height: 100%;
-    width: 0;
-    position: absolute;
-    top: -2px;
-  }
-  &::after {
-    left: -2px;
-  }
-  &::before {
-    right: -2px;
-  }
-}
-
-// ~~~~~~~ Нижняя косая линия ~~~~~~~
-.bottom-line {
-  position: absolute;
-  bottom: 0;
-}
-
-// ~~~~~~~ Верхняя косая линия ~~~~~~~
-.top-line {
-  position: absolute;
-  top: -2px;
-}
-
-// ~~~~~~~ Картинки, включающиеся при адаптиве ~~~~~~~
-
-.image__media {
+// ~~~~~~~ Картинки и текст, включающиеся при адаптиве ~~~~~~~
+.image__media,
+.text__media {
   display: none;
 }
+
 
 .link {
   position: relative;
@@ -139,13 +157,13 @@ section {
     width: 100%;
   }
 }
+
 // ~~~~~~~ Header ~~~~~~~
 .header {
   max-width: 1920px;
   width: 100%;
   position: relative;
   .logo svg {
-
     width: 330px;
     height: 330px;
     border-radius: 50%;
@@ -170,13 +188,12 @@ section {
 }
 
 .header__info {
-  max-width: 730px;
-  width: 100%;
-  height: 155px;
-  padding-top: 15px;
+  width: 38%;
+  height: 16%;
+  padding-top: 10px;
 
-  font-size: 37px;
-  line-height: 42px;
+  font-size: calc(12px + (37 - 12) * (100vw - 400px) / (1920 - 400));
+  line-height: 1.1em;
   letter-spacing: 5px;
   font-weight: 300;
 
@@ -189,13 +206,13 @@ section {
 
   &-text span{
     display: block;
-    margin-top: 5px;
+    // margin-top: 5px;
   }
 }
 
 .link-phone {
-  font-size: 37px;
-  line-height: 42px;
+  font-size: calc(12px + (37 - 12) * (100vw - 400px) / (1920 - 400));
+  line-height: 1.1em;
   letter-spacing: 5px;
   font-weight: 300;
   position: relative;
@@ -226,21 +243,9 @@ section {
 
 // ~~~~~~~ FREIGHTLINER ~~~~~~~
 
-.vertical-line.freightliner__top {
-  max-width: 1760px;
-  width: 100%;
+.freightliner__top {
   background-color: #000;
-
-  &::after {
-    border-right: 106px solid transparent;
-    border-top: 934px solid #000;
-  }
-  &::before {
-    border-left: 106px solid transparent;
-    border-bottom: 934px solid #000;
-  }
 }
-
 .freightliner__bottom {
   background-color: #000;
   .car-info {
@@ -250,83 +255,32 @@ section {
 }
 
 // ~~~~~~~ BMW E30 ~~~~~~~
-.vertical-line.bmw-e30 {
+.bmw-e30 {
   background-color: #000;
-  &::before {
-    border-left: 106px solid transparent;
-    border-bottom: 934px solid #000;
-  }
-  .bottom-line {
-    border-right: 1920px solid #000;
-    border-top: 156px solid transparent;
-  }
-  .top-line {
-    border-right: 1920px solid #000;
-    border-bottom: 156px solid transparent;
-  }
   .car-info__text {
     max-width: 570px;
   }
 }
 
 // ~~~~~~~ TOYOTA SOARER ~~~~~~~
-.vertical-line.toyota-soarer {
+.toyota-soarer {
   background-color: #000;
-  &::after {
-    border-right: 156px solid transparent;
-    border-top: 934px solid #000;
-  }
-  &::before {
-    border-left: 106px solid transparent;
-    border-bottom: 934px solid #000;
-  }
-  .bottom-line {
-    border-right: 1920px solid #000;
-    border-top: 90px solid transparent;
-  }
-  .top-line {
-    border-left: 1920px solid #000;
-    border-bottom: 356px solid transparent;
-  }
   .car-info__text {
     max-width: 400px;
   }
 }
 
 // ~~~~~~~ MERCEDES ~~~~~~~
-.vertical-line.mercedes {
+.mercedes {
   background-color: #000;
-  &::after {
-    border-right: 56px solid transparent;
-    border-top: 934px solid #000;
-  }
-  .top-line {
-    border-top: 120px solid #000;
-    border-left: 1920px solid #000;
-    border-bottom: 70px solid transparent;
-  }
   .car-info__text span {
     display: block;
   }
 }
 
 // ~~~~~~~ COSMIC NORMA ~~~~~~~
-.vertical-line.cosmic-norma {
+.cosmic-norma {
   background-color: #000;
-  &::before {
-    border-left: 56px solid transparent;
-    border-bottom: 934px solid #000;
-  }
-  .bottom-line {
-    border-right: 1940px solid #000;
-    border-top: 90px solid transparent;
-    bottom: 7px;
-
-  }
-  .top-line {
-    border-right: 1920px solid #000;
-    border-bottom: 106px solid transparent;
-  }
   .car-info__text {
     max-width: 570px;
   }
@@ -335,6 +289,9 @@ section {
 // ~~~~~~~ COSMIC NORMA ~~~~~~~
 .hummer-h3 {
   background-color: #000;
+  .car-info {
+    width: 32%;
+  }
   .car-info__text {
     max-width: 450px;
   }
@@ -343,6 +300,9 @@ section {
 // ~~~~~~~ TOYOTA GT86 ~~~~~~~
 .toyota-gt86 {
   background-color: #000;
+  .car-info {
+    width: 30%;
+  }
   .car-info__text {
     max-width: 310px;
     margin: 0 auto;
@@ -353,7 +313,7 @@ section {
 .aston-martin {
   background-color: #000;
   .car-info {
-    width: 776px;
+    width: 41%;
     letter-spacing: 1px;
   }
 }
@@ -362,7 +322,7 @@ section {
 .bmw-m3 {
   background-color: #000;
   .car-info {
-    width: 703px;
+    width: 37%;
   }
   .car-info__text {
     max-width: 480px;
@@ -373,8 +333,8 @@ section {
 .radical-rxc {
   background-color: #000;
   .car-info {
-    top: -2px;
-    right: 540px;
+    right: 50%;
+    transform: translateX(50%);
     left: auto;
   }
   .car-info__text {
@@ -383,33 +343,15 @@ section {
 }
 
 // ~~~~~~~ PORSCHE 911 ~~~~~~~
-.vertical-line.porsche-911 {
+.porsche-911 {
   background-color: #000;
-  &::after {
-    border-right: 270px solid transparent;
-    border-bottom: 934px solid #000;
-  }
-  &::before {
-    border-left: 270px solid transparent;
-    border-top: 934px solid #000;
-    right: -60px;
-  }
-  .bottom-line {
-    border-left: 1940px solid #000;
-    border-top: 100px solid transparent;
-  }
-  .top-line {
-    border-left: 1920px solid #000;
-    border-bottom: 120px solid transparent;
-    left: -70px;
-  }
   .car-info__text {
     max-width: 450px;
   }
 }
 
 // ~~~~~~~ SILVIA S15 ~~~~~~~
-.vertical-line.silvia-s15 {
+.silvia-s15 {
   background-color: #000;
   max-width: 1760px;
   margin: 0;
@@ -417,88 +359,48 @@ section {
   .car-info__text {
     max-width: 650px;
   }
-
-  &::after {
-    border-right: 156px solid transparent;
-    border-bottom: 934px solid #000;
-  }
-  &::before {
-    border-left: 156px solid transparent;
-    border-top: 934px solid #000;
-  }
 }
 
 // ~~~~~~~ SKYLINE R32 ~~~~~~~
-.vertical-line.skyline-r32 {
+.skyline-r32 {
   background-color: #000;
   max-width: 1760px;
+  .car-info {
+    width: 43%;
+  }
   .car-info__text {
     max-width: 650px;
   }
-  &::after {
-    border-right: 106px solid transparent;
-    border-bottom: 934px solid #000;
-  }
-  &::before {
-    border-left: 106px solid transparent;
-    border-top: 934px solid #000;
-  }
-  .bottom-line {
-    border-left: 1920px solid #000;
-    border-top: 56px solid transparent;
+}
+
+// ~~~~~~~ MINI COOPER ~~~~~~~
+.mini-cooper {
+  .car-info {
+    width: 33%;
   }
 }
 
 // ~~~~~~~ KAMAZ ~~~~~~~
-.vertical-line.kamaz {
+.kamaz {
   background-color: #000;
   .car-info {
-    width: 800px;
-    height: 195px;
-  }
-
-  &::after {
-    border-right: 156px solid transparent;
-    border-bottom: 934px solid #000;
-  }
-  &::before {
-    border-left: 156px solid transparent;
-    border-top: 934px solid #000;
+    width: 41%;
   }
 }
 
 // ~~~~~~~ BOLID ~~~~~~~
-.vertical-line.bolid {
+.bolid {
   background-color: #000;
   .car-info__text {
     max-width: 610px;
   }
 
-  &::after {
-    border-right: 206px solid transparent;
-    border-top: 934px solid #000;
-  }
-  &::before {
-    border-left: 206px solid transparent;
-    border-bottom: 934px solid #000;
-  }
 }
 
 // ~~~~~~~ HONDA S2000 ~~~~~~~
-.vertical-line.honda-s2000 {
+.honda-s2000 {
   background-color: #000;
-  &::after {
-    border-right: 90px solid transparent;
-    border-top: 934px solid #000;
-  }
-  .bottom-line {
-    border-right: 1920px solid #000;
-    border-top: 90px solid transparent;
-  }
-  .top-line {
-    border-left: 1920px solid #000;
-    border-bottom: 190px solid transparent;
-  }
+
   .car-info__text {
     max-width: 400px;
   }
@@ -506,28 +408,10 @@ section {
 
 // ~~~~~~~ NISSAN JUKE R ~~~~~~~
 .nissan-juke {
-  background-color: #000;
-  background-color: #2b2a29;
-  position: relative;
   width: 100%;
-}
-.nissan-juke__left {
-  position: absolute;
-  img {
-    max-width: 880px;
-  }
-  .car-info {
-    top: 360px;
-  }
-}
-
-.nissan-juke__right {
-  background-color: #000;
-  img {
-    display: block;
-    margin-left: auto;
-    padding-top: 165px;
-    max-width: 1570px;
+  .nissan-juke__left {
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -535,6 +419,7 @@ section {
 .manufacture {
   background-color: #000;
   display: flex;
+  justify-content: space-between;
   margin: 25px;
 
   .manufacture__info {
@@ -544,13 +429,36 @@ section {
       max-width: 580px;
     }
     &-title {
+      font-size: 29px;
+      line-height: 34px;
       text-align: center;
       margin-bottom: 15px;
     }
     &-img img {
       max-width: 560px;
     }
-    &-text p {
+  }
+
+  .printer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: -25px;
+    &__item {
+      flex-basis: 45%;
+      margin-top: 30px;
+      margin-left: 25px;
+      transition: opacity 0.3s ease-in;
+      text-align: center;
+      &:hover {
+        opacity: .7;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    span {
+      display: block;
       font-size: 24px;
       letter-spacing: 0;
       line-height: 29px;
@@ -568,14 +476,12 @@ section {
       border-bottom: none;
     }
     &-left {
-
       .manufacture__photo img {
         display: block;
         width: 100%;
       }
     }
     &-right {
-
       .manufacture__photo img {
         display: block;
         width: 100%;
@@ -587,21 +493,21 @@ section {
   }
   .pic-1 {
     width: 120px;
-    top: 285px;
+    top: 32%;
     right: -175px;
     transform: rotate(-18deg);
     z-index: 1;
   }
   .pic-2 {
     width: 180px;
-    top: 370px;
+    top: 41%;
     right: -210px;
     transform: rotate(12deg);
     z-index: 1;
   }
   .pic-3 {
     width: 165px;
-    top: 745px;
+    top: 83%;
     right: -145px;
     transform: rotate(-18deg);
     z-index: 1;
@@ -609,7 +515,7 @@ section {
   }
   .pic-4 {
     width: 270px;
-    top: 535px;
+    top: 60%;
     right: -240px;
     transform: rotate(-5deg);
   }
@@ -711,6 +617,209 @@ footer {
     height: 20px;
   }
 }
+
+
+// ~~~~~~~ Gallery ~~~~~~~
+.gallery {
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.gallery__wrapper {
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gallery__item {
+  display: block;
+  float: left;
+  width: 350px;
+  margin-bottom: 20px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+// ~~~~~~~ Video ~~~~~~~
+.video {
+  max-width: 1900px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 0 50px;
+}
+.video__wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+.video__item {
+  margin-bottom: 20px;
+  iframe, video, img {
+    max-width: 560px;
+    width: 100%;
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+// ~~~~~~~ Menu ~~~~~~~
+.menu {
+  position: fixed;
+  z-index: 100;
+  background-color: #000;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 50px;
+  &__wrapper {
+    max-width: 1500px;
+    height: 100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    width: 10%;
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+  &__item {
+    margin-left: 50px;
+    a {
+      font-size: calc(14px + (29 - 14) * (100vw - 400px) / (1920 - 400));
+      line-height: 1.1em;
+      transition: opacity .3s ease-in;
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+  .navigation__btn {
+    display: none;
+  }
+}
+
+// ~~~~~~~ Navigation ~~~~~~~
+.navigation {
+  position: fixed;
+  z-index: 100;
+  background-color: #000;
+  left: 0;
+  bottom: 0;
+  width: 15%;
+  background:
+  linear-gradient(-160deg, transparent 35px, #000 0) top right;
+  &__wrapper {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+  }
+  &__logo {
+    margin-top: 7px;
+    width: 150px;
+    margin-bottom: 0;
+  }
+  &__btn {
+    cursor: pointer;
+  }
+
+}
+
+.navigation__menu {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 400px;
+  z-index: 100;
+  background-color: #000;
+  transform: translateX(-100%);
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all .3s ease-in;
+  &.active {
+    transform: translateX(0);
+  }
+}
+.navigation__item {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  a.navigation__link {
+    width: 300px;
+    font-size: calc(14px + (29 - 14) * (100vw - 400px) / (1920 - 400));
+    line-height: 1.1em;
+    margin-left: 0;
+    margin-bottom: 50px;
+    transition: opacity .3s ease-in;
+    &:hover {
+      opacity: .5;
+    }
+
+  }
+}
+
+.btn-close {
+  db
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 200;
+  cursor: pointer;
+  &::after,
+  &::before {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    z-index: 200;
+    transform: rotate(45deg);
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+
+.menu__list .btn-close {
+  display: none;
+}
+
+.menu__list.active .btn-close {
+  display: block;
+}
+
+/*
+*frdsbs
+!dsfbsbg
+?dfgbsb
+TODO
+*/
+
+
+
 
 
 @import "media";

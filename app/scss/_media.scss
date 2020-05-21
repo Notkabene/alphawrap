@@ -1,27 +1,3 @@
-// ~~~~~~~  1800  ~~~~~~~~~~~
-//~~~~~~~~~~~~~~~~~~~~~~~~~~
-@media (max-width:1800px) {
-  .header__info {
-    max-width: 600px;
-  }
-  .nissan-juke__right img {
-    max-width: 1280px;
-  }
-  .nissan-juke__right .car-info--right {
-    top: -40px;
-    right: 40px;
-  }
-  .nissan-juke__left img {
-    max-width: 790px;
-  }
-}
-
-@media (max-width:1700px) {
-  .nissan-juke__left .car-info {
-    width: 590px;
-  }
-}
-
 // ~~~~~~~  1600  ~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~
 @media (max-width:1600px) {
@@ -29,37 +5,17 @@
     width: 250px;
     height: 250px;
   }
-
-  .header__info {
-    max-width: 500px;
-  }
   .header .car-photo img {
     max-width: 1745px;
     width: auto;
   }
+
   .logos .wrap-text svg {
     width: 550px;
   }
   .logos .wrap-white svg {
     width: 250px;
   }
-  .nissan-juke__right svg {
-    max-width: 1150px;
-  }
-  .nissan-juke__left img {
-    max-width: 690px;
-  }
-  .nissan-juke__left .car-info {
-    top: 310px;
-    width: 500px;
-    height: 150px;
-  }
-  .nissan-juke__right .car-info {
-    width: 560px;
-    height: 150px;
-    right: 60px;
-  }
-
 }
 
 // ~~~~~~~  1440  ~~~~~~~~~~~
@@ -69,88 +25,31 @@
   .manufacture .manufacture__info-wrapper {
     max-width: 410px;
   }
-  .manufacture .pic-1 {
-    top: 190px;
-  }
-  .manufacture .pic-2 {
-    top: 315px;
-  }
   .manufacture .pic-4 {
     width: 225px;
-    top: 500px;
   }
   .manufacture .pic-3 {
-    top: 706px;
     right: -193px;
   }
-  .vertical-line.toyota-soarer .top-line {
-    border-bottom: 195px solid transparent;
+  .manufacture__photos-right {
+    display: none;
   }
-  .toyota-soarer .car-info {
-    width: 580px;
+  .manufacture__photos {
+    width: 50%;
   }
-}
+  .manufacture .manufacture__info-text span {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .menu__item {
+    margin-left: 30px;
+  }
+  .manufacture .printer {
+    margin-left: -15px;
+    &__item {
 
-// ~~~~~~~  1350  ~~~~~~~~~~~
-//~~~~~~~~~~~~~~~~~~~~~~~~~~
-@media (max-width:1350px) {
-  .car-info {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    margin-top: 100px;
-  }
-  .silvia-s14 .car-info {
-    margin-top: 0;
-  }
-  .radical-rxc .car-info {
-    left: 0;
-  }
-  .nissan-juke .car-info {
-    position: absolute;
-  }
-  .vertical-line.kamaz .car-info {
-    height: 100%;
-  }
-
-  .toyota-soarer .car-info__text,
-  .hummer-h3 .car-info__text,
-  .toyota-gt86 .car-info__text,
-  .aston-martin .car-info,
-  .bmw-m3 .car-info,
-  .bmw-m3 .car-info__text,
-  .vertical-line.porsche-911 .car-info__text,
-  .vertical-line.skyline-r32 .car-info__text,
-  .vertical-line.kamaz .car-info,
-  .vertical-line.toyota-soarer .car-info__text,
-  .toyota-soarer .car-info {
-    max-width: 100%;
-  }
-  .vertical-line.mercedes .car-info__text span {
-    display: inline-block;
-  }
-  .nissan-juke__right img {
-    padding-top: 250px;
-  }
-  .nissan-juke__right .car-info {
-    position: absolute;
-    bottom: 0;
-    top: auto;
-    left: 35px;
-    width: 800px;
-    right: auto;
-  }
-  .nissan-juke__left {
-    width: 100%;
-  }
-
-  .nissan-juke__left .car-info {
-    top: 0;
-    right: 0;
-    left: auto;
-    width: 560px;
+      margin-left: 15px;
+    }
   }
 }
 
@@ -182,12 +81,6 @@
   .logos .vinyl-white svg {
     width: 200px;
   }
-  .vertical-line.mercedes .top-line {
-    border-top: 30px solid #000;
-  }
-  .manufacture__photos-right {
-    display: none;
-  }
   .pictures img {
     width: 100%;
   }
@@ -199,35 +92,31 @@
     margin-left: 40px;
   }
 }
+// ~~~~~~~  1250  ~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~
+@media (max-width:1250px) {
+  .video__item {
+    iframe,
+    video,
+    img {
+      margin-left: 30px;
+    }
+  }
+}
 
 // ~~~~~~~  1200  ~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~
 @media (max-width:1200px) {
-  .animated-fadeInLeft,
-  .animated-fadeInRight,
-  .animated-fadeInDownBig {
-    animation: none;
-  }
-
   .footer__text{
     display: none;
   }
-
   .footer__text.footer__text-responsive {
     display: flex;
   }
-  .car-info,
   .header__info,
   .link-phone {
-    font-size: 32px;
-    line-height: 32px;
     letter-spacing: 3px;
   }
-  .header__info {
-    max-width: 402px;
-    height: 130px;
-  }
-
   .logos {
     height: 480px;
   }
@@ -240,83 +129,45 @@
   .logos .vinyl-white svg {
     width: 175px;
   }
-  .nissan-juke__left .car-info {
-    width: 475px;
-    margin-top: 20px;
+  .menu__item {
+    margin-left: 15px;
   }
 
 }
 
-// ~~~~~~~  1199  ~~~~~~~~~~~
+
+// ~~~~~~~  1100  ~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~
-@media (max-width:1199px) {
-  .nissan-juke__left .car-info {
-    width: 100%;
-    position: relative;
+@media (max-width:1100px) {
+  .manufacture .manufacture__info-text span {
+    font-size: 20px;
+    line-height: 24px;
   }
-  .nissan-juke {
-    background-color: #000;
-  }
-  .nissan-juke__left,
-  .nissan-juke__right .car-info {
-    position: relative;
-  }
-  .nissan-juke__left img {
-    max-width: 100%;
-  }
-  .nissan-juke__right img {
-    padding-top: 10px;
-  }
-  .nissan-juke .car-info {
-    width: 100%;
-    margin-top: 20px;
-    left: 0;
-    height: 100%;
-  }
-  .nissan-juke__right img {
-    max-width: 100%;
+  .car-info {
+    letter-spacing: 2px;
   }
 }
 
-// ~~~~~~~  1050  ~~~~~~~~~~~
+// ~~~~~~~  1023  ~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~
-@media (max-width:1050px) {
+@media (max-width:1023px) {
+  section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .header {
+    margin-top: 70px;
+  }
+  .animated-fadeInLeft,
+  .animated-fadeInRight,
+  .animated-fadeInDownBig {
+    animation: none;
+  }
   .header .logo svg {
     width: 190px;
     height: 190px;
   }
-  .car-info,
-  .header__info,
-  .link-phone {
-    font-size: 30px;
-  }
-  .header__info {
-    max-width: 300px;
-    height: 125px;
-  }
-  .vertical-line.porsche-911::before {
-    right: -106px;
-  }
-  .vertical-line.porsche-911 .bottom-line {
-    border-left: 1200px solid #000;
-    border-top: 60px solid transparent;
-  }
-  .vertical-line.porsche-911 .top-line {
-    top: 63px;
-  }
-  .vertical-line.porsche-911::after {
-    border-right: 144px solid transparent;
-  }
-  .vertical-line.bolid::after {
-    border-right: 150px solid transparent;
-    border-top: 700px solid #000;
-    left: -10px;
-  }
-  .vertical-line.bolid::before {
-    right: -28px;
-    border-left: 150px solid transparent;
-    border-bottom: 700px solid #000;
-  }
+
   .manufacture {
     display: block;
   }
@@ -345,12 +196,18 @@
     align-items: center;
     margin: 30px 0;
   }
+  .manufacture__photos {
+    width: 100%;
+  }
   .manufacture__photos-left,
   .manufacture__photos-right {
     margin: 0 auto;
   }
   .manufacture__photos-right {
     display: block;
+  }
+  .manufacture .printer {
+    justify-content: center;
   }
   .footer__img,
   .footer__info {
@@ -369,9 +226,79 @@
   }
   .footer__item.alpha-vinil {
     margin: 40px 0;
+  }
+  .footer__contacts {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .navigation {
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: auto;
+    padding: 0 50px;
+    background:
+    linear-gradient(0deg, transparent 0, #000 0) top right;
+    &__wrapper {
+      max-width: 1200px;
+      height: 100px;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__logo {
+      width: 15%;
+    }
+    &__item {
+      margin-left: 0;
+    }
 
   }
+  .navigation__item a.navigation__link {
+    font-size: 22px;
+    line-height: 1.1em;
+    margin-bottom: 0;
+  }
+
+  .menu__list {
+    margin: 0;
+    padding-top: 50px;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 400px;
+    background-color: #000;
+    transform: translateX(-100%);
+    transition: all .3s ease-in;
+    height: 100vh;
+    &.active {
+      transform: translateX(0);
+    }
+  }
+  .menu__item {
+    margin-left: 0;
+    margin-bottom: 30px;
+    a {
+      font-size: 22px;
+    }
+  }
+  .menu .navigation__btn {
+    display: block;
+  }
+  .menu__wrapper {
+    max-width: 700px;
+  }
+  .menu__logo {
+    width: 100px;
+  }
 }
+
+
+
 
 // ~~~~~~~  950  ~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -387,34 +314,43 @@
     width: 300px;
   }
 
-  .car-info {
-    margin-top: 60px;
+  .aston-martin .car-info,
+  .kamaz .car-info {
+    width: 45%;
+    height: 26%;
+  }
+  .skyline-r32 .car-info {
+    width: 47%;
+    height: 24%;
   }
   .silvia-s14 .car-info {
     margin-top: 0;
   }
-  .vertical-line.toyota-soarer::after {
-    left: -50px;
-  }
-  .vertical-line.mercedes::after {
+  .mercedes::after {
     display: none;
   }
-  .vertical-line.mercedes .top-line {
-    border-left: 1050px solid #000;
-    top: 80px;
+  .footer__contacts {
+    font-size: 20px;
+    line-height: 36px;
   }
-  .vertical-line.honda-s2000::after {
-    border-right: 90px solid transparent;
-    border-top: 600px solid #000;
+
+}
+
+// ~~~~~~~  850  ~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~
+@media (max-width:850px) {
+  .car-info {
+    height: 25%;
   }
-  .vertical-line.honda-s2000 .bottom-line {
-    border-right: 1050px solid #000;
-    border-top: 70px solid transparent;
+  .aston-martin .car-info {
+    width: 47%;
   }
-  .vertical-line.honda-s2000 .top-line {
-    border-left: 1050px solid #000;
-    border-bottom: 143px solid transparent;
-    top: 45px;
+  .skyline-r32 .car-info,
+  .kamaz .car-info {
+    width: 49%;
+  }
+  .car-info {
+    letter-spacing: 1px;
   }
 }
 
@@ -425,22 +361,10 @@
     width: 130px;
     height: 130px;
   }
-  .car-info,
-  .header__info,
-  .link-phone {
-    font-size: 24px;
-    line-height: 24px;
-    letter-spacing: 1px;
-  }
-  .header__info {
-    max-width: 224px;
-    height: 105px;
-  }
 
   .logos {
     height: 280px;
   }
-
   .logos .wrap-white svg,
   .logos .vinyl-white svg {
     width: 120px;
@@ -448,59 +372,8 @@
   .logos .wrap-text svg {
     width: 250px;
   }
-
-  .car-info {
-    margin-top: 40px;
-  }
   .silvia-s14 .car-info {
     margin-top: 0;
-  }
-  .vertical-line.freightliner__top::after {
-    border-top: 700px solid #000;
-    left: -20px;
-  }
-  .vertical-line.toyota-soarer::after {
-    left: -73px;
-  }
-  .vertical-line.mercedes .top-line {
-    top: 43px;
-  }
-  .vertical-line.porsche-911::before {
-    border-top: 700px solid #000;
-  }
-  .vertical-line.porsche-911 .top-line {
-    border-bottom: 60px solid transparent;
-  }
-  .vertical-line.porsche-911::after {
-    border-right: 58px solid transparent;
-    border-bottom: 600px solid #000;
-  }
-  .vertical-line.silvia-s15::before {
-    border-left: 120px solid transparent;
-    border-top: 600px solid #000;
-    right: -15px;
-  }
-  .vertical-line.silvia-s15::after {
-    border-right: 120px solid transparent;
-    border-bottom: 600px solid #000;
-    left: -15px;
-  }
-  .vertical-line.skyline-r32::before {
-    border-top: 700px solid #000;
-    right: -30px;
-  }
-  .vertical-line.bolid::after {
-    left: -45px;
-  }
-  .vertical-line.bolid::before {
-    right: -15px;
-  }
-  .vertical-line.honda-s2000 .top-line {
-    border-bottom: 115px solid transparent;
-  }
-  .vertical-line.honda-s2000::after {
-    border-right: 66px solid transparent;
-    border-top: 500px solid #000;
   }
   .manufacture__pic.pic-1 {
     width: 100px;
@@ -536,6 +409,78 @@
   }
 }
 
+// ~~~~~~~  750  ~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~
+@media (max-width:750px) {
+  .car-info,
+  .aston-martin .car-info,
+  .skyline-r32 .car-info,
+  .bmw-m3 .car-info,
+  .hummer-h3 .car-info,
+  .toyota-gt86 .car-info,
+  .mini-cooper .car-info,
+  .kamaz .car-info {
+    width: 100%;
+    position: relative;
+    padding: 0 50px;
+  }
+  .car-info__text {
+    max-width: 100%;
+  }
+  .mercedes .car-info__text span {
+    display: inline-block;
+  }
+  .nissan-juke .nissan-juke__left {
+    top: 0;
+    transform: none;
+  }
+  .image__big, .text__start {
+    display: none;
+  }
+  .image__media,
+  .text__media {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .text__media {
+    width: 100%;
+    margin: 0 auto 30px auto;
+  }
+
+  .image__media.juke__right {
+    margin-bottom: 60px;
+  }
+  .logos {
+    height: 100%;
+  }
+  .header__info {
+    position: relative;
+  }
+  .navigation__logo {
+    width: 17%;
+  }
+
+}
+
+// ~~~~~~~  720  ~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~
+@media (max-width:720px) {
+  .menu {
+    padding: 0 20px;
+  }
+  .menu__wrapper {
+    max-width: 600px;
+  }
+  .gallery__item {
+    width: 250px;
+  }
+  .btn-up {
+    right: 20px;
+  }
+
+}
+
 // ~~~~~~~  600  ~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~
 @media (max-width:600px) {
@@ -544,17 +489,12 @@
     height: 74px;
     position: relative;
   }
-  .header__info-text span {
-    display: inline-block;
-  }
   .header .logo svg {
     bottom: 74px;
   }
-
   .logos {
     height: 210px;
   }
-
   .logos .wrap-white svg,
   .logos .vinyl-white svg {
     width: 100px;
@@ -563,48 +503,6 @@
     width: 200px;
   }
 
-  .image__big {
-    display: none;
-  }
-  .image__media {
-    display: block;
-    margin-top: 15px;
-  }
-  .vertical-line.toyota-soarer::after {
-    left: -90px;
-  }
-
-  .vertical-line.porsche-911 .bottom-line {
-    border-top: 25px solid transparent;
-  }
-
-  .vertical-line.skyline-r32::before {
-    border-top: 700px solid #000;
-    right: -40px;
-  }
-  .vertical-line.skyline-r32 .bottom-line {
-    border-left: 700px solid #000;
-    border-top: 40px solid transparent;
-  }
-  .vertical-line.kamaz::after {
-    left: -20px;
-  }
-  .vertical-line.kamaz::before {
-    right: -80px;
-  }
-  .vertical-line.bolid::after {
-    left: -60px;
-  }
-  .vertical-line.bolid::before {
-    right: -25px;
-  }
-  .vertical-line.honda-s2000::after {
-    border-right: 55px solid transparent;
-    border-top: 420px solid #000;
-  }
-  .vertical-line.honda-s2000 .top-line {
-    top: 28px;
-  }
   .manufacture .manufacture__photos {
     display: block;
   }
@@ -624,9 +522,6 @@
   .manufacture__pic.pic-4 {
     width: 140px;
   }
-  .manufacture .manufacture__info-text p {
-    font-size: 22px
-  }
   .manufacture .manufacture__info-title {
     font-size: 26px;
     margin-top: 40px;
@@ -635,7 +530,56 @@
   .manufacture__info-img {
     margin-top: 10px;
   }
+
 }
+
+// ~~~~~~~  550 ~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~
+@media (max-width:550px) {
+  .manufacture .printer {
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    &__item {
+      flex-basis: 90%;
+      margin-top: 50px;
+      margin-left: 0;
+    }
+    span {
+      margin-top: 5px;
+    }
+  }
+}
+
+// ~~~~~~~  520 ~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~
+@media (max-width:520px) {
+  .header {
+
+    margin-top: 30px;
+
+  }
+  .navigation__wrapper,
+  .menu__wrapper {
+    max-width: 600px;
+    height: 60px;
+  }
+  .gallery__item {
+    width: 200px;
+  }
+  .gallery {
+    margin-top: 60px;
+  }
+  .navigation__logo {
+    width: 70px;
+  }
+  .menu__logo {
+    width: 75px;
+  }
+}
+
 
 // ~~~~~~~  480  ~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -643,7 +587,6 @@
   .logos {
     height: 210px;
   }
-
   .logos .wrap-white svg,
   .logos .vinyl-white svg {
     width: 80px;
@@ -651,52 +594,13 @@
   .logos .wrap-text svg {
     width: 160px;
   }
-  .vertical-line.freightliner__top::after {
-    left: -45px;
-  }
-  .vertical-line.freightliner__top::before {
-    right: -10px;
-  }
-  .vertical-line.toyota-soarer .top-line {
-    top: -20px;
-  }
-  .vertical-line.mercedes .top-line {
-    top: 30px;
-  }
   .porsche-911.car-photo img {
     width: 120%;
-  }
-  .vertical-line.porsche-911::before {
-    border-left: 112px solid transparent;
-    right: -42px;
-  }
-  .vertical-line.porsche-911 .top-line {
-    top: 85px;
-  }
-  .vertical-line.silvia-s15::after {
-    left: -23px;
-  }
-  .vertical-line.silvia-s15::before {
-    right: -45px;
-  }
-
-  .vertical-line.skyline-r32::before {
-    border-top: 500px solid #000;
-    right: -28px;
-  }
-  .vertical-line.skyline-r32::after {
-    left: -15px;
-  }
-  .vertical-line.skyline-r32 .bottom-line {
-    border-left: 600px solid #000;
-    border-top: 24px solid transparent;
   }
   .manufacture__pic {
     display: none;
   }
-  .manufacture .manufacture__info-text p {
-    font-size: 20px;
-    line-height: 24px;
+  .manufacture .manufacture__info-text span {
     letter-spacing: .5px;
     margin-top: 15px;
   }
@@ -706,7 +610,6 @@
   }
   .manufacture__info-img {
     margin: 15px 0;
-
   }
   .footer__item.alpha-vinil .alpha-white,
   .footer__item.alpha-vinil .vinyl-white {
@@ -721,43 +624,22 @@
   }
 }
 
+// ~~~~~~~  420  ~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~
+@media (max-width:420px) {
+  .gallery__item {
+    width: 140px;
+  }
+}
+
 // ~~~~~~~  400  ~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~
 @media (max-width:400px) {
-  .car-info,
-  .header__info,
-  .link-phone {
-    font-size: 22px;
-    line-height: 22px;
-  }
   .header__info {
     padding-top: 7px;
   }
   .logos {
     height: 120px;
-  }
-  .vertical-line.freightliner__top::after {
-    left: -105px;
-  }
-  .vertical-line.toyota-soarer .top-line {
-    top: -40px;
-  }
-  .vertical-line.mercedes .top-line {
-    top: 20px;
-  }
-  .vertical-line.skyline-r32::before {
-    border-top: 400px solid #000;
-  }
-
-  .vertical-line.bolid::after {
-    left: -80px;
-  }
-  .vertical-line.honda-s2000 .top-line {
-    border-bottom: 90px solid transparent;
-  }
-  .vertical-line.honda-s2000::after {
-    border-right: 40px solid transparent;
-    border-top: 313px solid #000;
   }
   .alpha-text svg{
     width: 220px;
@@ -783,9 +665,6 @@
 // ~~~~~~~  380  ~~~~~~~~~~~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~
 @media (max-width:380px) {
-  .car-info {
-    font-size: 20px;
-  }
   .logos .wrap-white svg,
   .logos .vinyl-white svg {
     width: 65px;
@@ -793,37 +672,8 @@
   .logos .wrap-text svg {
     width: 135px;
   }
-  .vertical-line.toyota-soarer::after {
-    left: -110px;
-  }
-  .vertical-line.toyota-soarer .top-line {
-    top: -48px;
-  }
-  .vertical-line.mercedes .top-line {
-    border-top: 24px solid #000;
-    border-left: 500px solid #000;
-    top: 52px;
-  }
   .car-info {
     margin-top: 24px;
-  }
-  .vertical-line.porsche-911::before {
-    right: -58px;
-  }
-  .vertical-line.kamaz::after {
-    left: -26px;
-  }
-  .vertical-line.kamaz::before {
-    right: -96px;
-  }
-  .vertical-line.bolid::after {
-    left: -85px;
-  }
-  .vertical-line.honda-s2000::after {
-    border-top: 294px solid #000;
-  }
-  .vertical-line.honda-s2000 .top-line {
-    top: 23px;
   }
   .manufacture {
     margin: 25px 15px;
@@ -831,7 +681,7 @@
   .manufacture .manufacture__info-title {
     font-size: 22px;
   }
-  .manufacture .manufacture__info-text p {
+  .manufacture .manufacture__info-text span {
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.5px;
